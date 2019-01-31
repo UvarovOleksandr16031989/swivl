@@ -1,0 +1,53 @@
+.header
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06)
+  background-color: #ffffff
+  padding: 21px 0 23px 0
+  position: relative
+
+
+
+
+  &__container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    +media(600)
+      flex-direction: column
+
+  &__inner
+    @extend .header__container
+
+
+  &__box
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 0 0 26px
+    +media(600)
+      padding: 0 0 26px 0
+
+  &__user-name
+    +openSans(400,16)
+    color: #3e4056
+
+
+  &__photo
+    padding: 0 16px 0 20px
+
+  &__btn
+    opacity: .4
+    cursor: pointer
+
+  &__alert,
+  &__message
+    cursor: pointer
+
+  &__present
+    padding: 0 8px
+    cursor: pointer
+
+  &__logo
+    +media(600)
+      padding-bottom: 25px

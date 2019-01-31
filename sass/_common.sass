@@ -1,0 +1,120 @@
+
+=media($width)
+  @media only screen and (max-width: $width+ px)
+    @content
+
+
+@mixin montserrat($weight,$size)
+  font-size: $size+px
+  font-weight: $weight
+  font-family: 'Montserrat', sans-serif
+
+
+
+@mixin openSans($weight,$size)
+  font-size: $size+ px
+  font-weight: $weight
+  font-family: 'Open Sans', sans-serif
+
+
+@mixin col($col)
+  width: (100%/12*$col)
+
+.col-1
+  @include col(1)
+
+.col-2
+  @include col(2)
+
+.col-3
+  @include col(3)
+
+.col-4
+  @include col(4)
+
+.col-5
+  @include col(5)
+
+.col-6
+  @include col(6)
+
+.col-7
+  @include col(7)
+
+.col-8
+  @include col(8)
+
+.col-9
+  @include col(9)
+
+.col-10
+  @include col(10)
+
+.col-11
+  @include col(11)
+
+.col-12
+  @include col(12)
+
++media(1023)
+  .col-md-12
+    @include col(12)
+
+
+.container
+  max-width: 1172px
+  position: relative
+  margin: 0 auto
+  padding: 0 15px
+  &--flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    +media(1023)
+      display: flex
+      flex-direction: column
+      align-items: center
+
+
+.inner
+  width: 66%
+  +media(1023)
+    width: 100%
+
+.box
+  background: rgba( #ecf1f8, .4)
+  padding: 6.14% 0 20.90% 0
+  min-height: 100vh
+
+
+
+.clearfix::after
+  content: ''
+  clear: both
+  display: table
+  overflow: hidden
+
+textarea
+  outline: none
+  resize: none
+  &:active, &:focus
+    outline: none
+    resize: none
+
+button
+  outline: none
+  border: none
+  &:active, &:focus
+    outline: none
+    border: none
+
+\:active,:hover,:focus
+  outline: none
+  outline-offset: 0
+
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none

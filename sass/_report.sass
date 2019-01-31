@@ -1,0 +1,40 @@
+.report
+  position: absolute
+  bottom: -40px
+  left: 20px
+  min-width: 176px
+  border-radius: 8px
+  background: rgba(#fff, .94)
+  padding: 24px 0
+  transition: .3s
+  visibility: hidden
+  opacity: 0
+  &.active
+    visibility: visible
+    opacity: 1
+
+  +media(800)
+    left: -400%
+  +media(600)
+    bottom: 100px
+
+
+  &__content
+    +openSans(600,16)
+    color: #3e4056
+    padding-left: 19px
+
+  &__figure
+    display: inline-block
+
+  &__inner
+    min-height: 38px
+    padding: 0 0 0 26px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    &:hover
+      background-color: rgba(#ecf1f8, .6)
+      cursor: pointer
+
